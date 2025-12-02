@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:zakat/utils/extension.dart';
-
-import '../utils/app_constants.dart';
-import '../utils/color_resources.dart';
+import '../utils/extension.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -64,10 +60,9 @@ class CustomButton extends StatelessWidget {
               : Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    if (iconPath != null) SvgPicture.asset(iconPath!),
                     if(leadingIcon != null) leadingIcon!,
                     SizedBox(
-                      width: iconPath != null ? 10.w : 0,
+                      width: leadingIcon != null ? 10.w : 0,
                     ),
                     Text(
                       text,

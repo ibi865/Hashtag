@@ -1,0 +1,60 @@
+{
+  "@@locale": "en",
+  "appTitle": "HashtagFlow",
+  "@appTitle": {
+    "description": "The application title"
+  },
+  "screenA": "Screen A",
+  "@screenA": {
+    "description": "Title for Screen A"
+  },
+  "screenB": "Screen B",
+  "@screenB": {
+    "description": "Title for Screen B"
+  },
+  "screenC": "Screen C",
+  "@screenC": {
+    "description": "Title for Screen C"
+  },
+  "navigateToScreenB": "Navigate to Screen B",
+  "@navigateToScreenB": {
+    "description": "Button text to navigate to Screen B"
+  },
+  "navigateToScreenC": "Navigate to Screen C",
+  "@navigateToScreenC": {
+    "description": "Button text to navigate to Screen C"
+  },
+  "phrase": "Phrase",
+  "@phrase": {
+    "description": "Label for phrase field"
+  },
+  "hashtags": "Hashtags",
+  "@hashtags": {
+    "description": "Label for hashtags field"
+  },
+  "enterPhrase": "Enter phrase",
+  "@enterPhrase": {
+    "description": "Hint text for phrase field"
+  },
+  "enterHashtags": "Enter hashtags",
+  "@enterHashtags": {
+    "description": "Hint text for hashtags field"
+  },
+  "submit": "Submit",
+  "@submit": {
+    "description": "Submit button text"
+  },
+  "done": "Done",
+  "@done": {
+    "description": "Done button text"
+  },
+  "congratulations": "Congratulations 🎉",
+  "@congratulations": {
+    "description": "Congratulations message"
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "OK button text"
+  }
+}
+
