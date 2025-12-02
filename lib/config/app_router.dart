@@ -58,10 +58,7 @@ class AppRouter {
               // Initialize from route parameters if available
               final phrase = state.uri.queryParameters['phrase'];
               final hashtags = state.uri.queryParameters['hashtags'];
-              if (phrase != null || hashtags != null) {
-                vm.phrase = phrase;
-                vm.hashtags = hashtags;
-              }
+              vm.setData(phrase, hashtags);
               return vm;
             },
             child: const ScreenB(),

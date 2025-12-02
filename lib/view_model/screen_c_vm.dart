@@ -41,8 +41,8 @@ class ScreenCVm extends BaseViewModel {
     final phrase = phraseController.text;
     final hashtags = hashtagsController.text;
     
-    context.pop();
-    context.pushReplacement(
+    // Navigate back to Screen B with the data
+    context.go(
       '${AppRoutes.screenB}?phrase=${Uri.encodeComponent(phrase)}&hashtags=${Uri.encodeComponent(hashtags)}',
     );
   }

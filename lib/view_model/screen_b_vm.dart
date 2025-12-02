@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'base_vm.dart';
+import '../config/app_routes.dart';
 
 class ScreenBVm extends BaseViewModel {
-  String? phrase;
-  String? hashtags;
+  String? _phrase;
+  String? _hashtags;
 
-  bool get hasData => (phrase?.isNotEmpty ?? false) || (hashtags?.isNotEmpty ?? false);
+  String? get phrase => _phrase;
+  String? get hashtags => _hashtags;
+
+  bool get hasData => (_phrase?.isNotEmpty ?? false) || (_hashtags?.isNotEmpty ?? false);
+
+  void setData(String? phrase, String? hashtags) {
+    _phrase = phrase;
+    _hashtags = hashtags;
+    notifyListeners();
+  }
 
   void navigateToScreenC(BuildContext context, String route) {
     context.push(route);
@@ -27,18 +37,12 @@ class ScreenBVm extends BaseViewModel {
               fontWeight: FontWeight.bold,
             ),
           ),
-          content: const Text(
-            'Congratulations 🎉',
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(dialogContext).pop();
                 // Navigate back to Screen A after dialog is closed
-                context.pop();
+                context.go(AppRoutes.screenA);
               },
               child: const Text(
                 'OK',
